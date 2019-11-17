@@ -16,4 +16,5 @@ public class BabySitterTest {
         int pay = babySitter.calculatePay("5:00pm", "6:00pm");
         assertEquals(10, pay);
     }
+
 }
