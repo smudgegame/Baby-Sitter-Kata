@@ -19,10 +19,10 @@ public class FamilyTest {
     }
 
     @Test
-    public void payBasedOnTimeWorked(){
-        Family family = new Family(7);
+    public void payBasedOnFamilyA(){
+        Family family = new Family(15);
 
-        assertEquals(14,family.getPay(18));
+        assertEquals(20,family.getPay(24));
     }
 
 }

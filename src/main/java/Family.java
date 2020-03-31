@@ -6,8 +6,8 @@ public class Family {
     }
 
     public int getPay(int hour) {
-        int pay = (hour-16)*rate;
-        return pay;
+        if(hour>=23) rate+=5;
+        return rate;
     }
 
 
