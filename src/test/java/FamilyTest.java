@@ -6,23 +6,23 @@ public class FamilyTest {
 
     @Test
     public void basicFamilyTest() {
-        Family family = new Family(6);
+        Family family = new Family("A");
 
-        assertEquals(6, family.getPay(17));
+        assertEquals(15, family.getRate(17));
     }
 
     @Test
-    public void basicFamilyWithADifferentRate() {
-        Family family = new Family(7);
+    public void familyWithDifferentRate() {
+        Family family = new Family("B");
 
-        assertEquals(7, family.getPay(17));
+        assertEquals(12,family.getRate(17));
     }
 
     @Test
-    public void payBasedOnFamilyA(){
-        Family family = new Family(15);
+    public void thirdFamilyRate(){
+        Family family = new Family("C");
 
-        assertEquals(20,family.getPay(24));
+        assertEquals(21,family.getRate(17));
     }
 
 }

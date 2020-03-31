@@ -1,10 +1,16 @@
 public class Family {
-    private int rate;
+    private String letter;
 
-    public Family(int rate) {
-        this.rate = rate;
+    public Family(String letter) {
+        this.letter = letter;
     }
 
+    public int getRate(int hour) {
+        int rate=15;
+        if (letter.equals("A")) rate=15;
+        if (letter.equals("B")) rate=12;
+        if (letter.equals("C")) rate=21;
+        return rate;
 
-
+    }
 }
