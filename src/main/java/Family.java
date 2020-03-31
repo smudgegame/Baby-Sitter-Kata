@@ -5,10 +5,6 @@ public class Family {
         this.rate = rate;
     }
 
-    public int getPay(int hour) {
-        if(hour>=23) rate+=5;
-        return rate;
-    }
 
 
 }
