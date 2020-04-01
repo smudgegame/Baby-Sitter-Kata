@@ -66,4 +66,12 @@ public class FamilyTest {
         assertEquals(16,family.getRate(24));
     }
 
+    @Test
+    public void familyCAfterNine(){
+        Family family = new Family(7);
+        family.getId("C");
+
+        assertEquals(15,family.getRate(21) );
+    }
+
 }

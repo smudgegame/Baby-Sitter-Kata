@@ -11,14 +11,17 @@ public class Family {
             return rate;
         if(this.id.equals("A")) {
             rate=15;
-            if(hour>=23) rate=20;
+            if(hour>=23) rate = 20;
         }
         if(this.id.equals("B"))  {
             rate=12;
             if(22 <= hour && hour < 24) rate=8;
-            if(24 <= hour) rate =16;
+            if(24 <= hour) rate = 16;
         }
-        if(this.id.equals("C"))  rate=21;
+        if(this.id.equals("C")) {
+            rate=21;
+            if(21 <= hour) rate = 15;
+        }
             return rate;
     }
 
