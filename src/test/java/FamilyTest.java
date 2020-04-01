@@ -8,21 +8,22 @@ public class FamilyTest {
     public void basicFamilyTest() {
         Family family = new Family(6);
 
-        assertEquals(6, family.getPay(17));
+        assertEquals(6, family.getRate(17));
     }
 
     @Test
     public void basicFamilyWithADifferentRate() {
         Family family = new Family(7);
 
-        assertEquals(7, family.getPay(17));
+        assertEquals(7, family.getRate(17));
     }
 
     @Test
-    public void payBasedOnTimeWorked(){
-        Family family = new Family(7);
+    public void familyRateDependentOnHour() {
+        Family family = new Family( 7);
 
-        assertEquals(14,family.getPay(18));
+        assertEquals(20,family.getRate(23));
     }
+
 
 }
