@@ -10,6 +10,8 @@ public class Family {
         if(this.id == null)
             return rate;
         if(this.id.equalsIgnoreCase("A"))  rate=15;
+        if(this.id.equalsIgnoreCase("B"))  rate=12;
+        if(this.id.equalsIgnoreCase("C"))  rate=21;
             return rate;
     }
 
