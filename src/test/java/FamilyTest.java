@@ -22,6 +22,7 @@ public class FamilyTest {
     public void baseRateBasedOnFamilyId() {
         Family family = new Family(7);
         family.getId("A");
+
         assertEquals(15,family.getRate(17) );
     }
 
@@ -29,6 +30,7 @@ public class FamilyTest {
     public void familyBBaseRate(){
         Family family = new Family(7);
         family.getId("B");
+
         assertEquals(12,family.getRate(17) );
     }
 
@@ -36,6 +38,15 @@ public class FamilyTest {
     public void familyCBaseRate(){
         Family family = new Family(7);
         family.getId("C");
+
         assertEquals(21,family.getRate(17) );
+    }
+
+    @Test
+    public void familyARateBasedOnHour(){
+        Family family = new Family(7);
+        family.getId("A");
+
+        assertEquals(20,family.getRate(23));
     }
 }
