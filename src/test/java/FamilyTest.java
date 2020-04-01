@@ -49,4 +49,21 @@ public class FamilyTest {
 
         assertEquals(20,family.getRate(23));
     }
+
+    @Test
+    public void familyBTenToTwelve(){
+        Family family = new Family(7);
+        family.getId("B");
+
+        assertEquals(8,family.getRate(22));
+    }
+
+    @Test
+    public void familyBAfterTwelve(){
+        Family family = new Family(7);
+        family.getId("B");
+
+        assertEquals(16,family.getRate(24));
+    }
+
 }
