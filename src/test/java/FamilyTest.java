@@ -19,11 +19,9 @@ public class FamilyTest {
     }
 
     @Test
-    public void familyRateDependentOnHour() {
-        Family family = new Family( 7);
-
-        assertEquals(20,family.getRate(23));
+    public void baseRateBasedOnFamilyId() {
+        Family family = new Family(7);
+        family.getId("A");
+        assertEquals(15,family.getRate(17) );
     }
-
-
 }
