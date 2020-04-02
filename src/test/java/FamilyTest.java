@@ -21,7 +21,7 @@ public class FamilyTest {
     @Test
     public void baseRateBasedOnFamilyId() {
         Family family = new Family(7);
-        family.getId("A");
+        family.setId("A");
 
         assertEquals(15,family.getRate(17) );
     }
@@ -29,7 +29,7 @@ public class FamilyTest {
     @Test
     public void familyBBaseRate(){
         Family family = new Family(7);
-        family.getId("B");
+        family.setId("B");
 
         assertEquals(12,family.getRate(17) );
     }
@@ -37,7 +37,7 @@ public class FamilyTest {
     @Test
     public void familyCBaseRate(){
         Family family = new Family(7);
-        family.getId("C");
+        family.setId("C");
 
         assertEquals(21,family.getRate(17) );
     }
@@ -45,7 +45,7 @@ public class FamilyTest {
     @Test
     public void familyARateBasedOnHour(){
         Family family = new Family(7);
-        family.getId("A");
+        family.setId("A");
 
         assertEquals(20,family.getRate(23));
     }
@@ -53,7 +53,7 @@ public class FamilyTest {
     @Test
     public void familyBTenToTwelve(){
         Family family = new Family(7);
-        family.getId("B");
+        family.setId("B");
 
         assertEquals(8,family.getRate(22));
     }
@@ -61,7 +61,7 @@ public class FamilyTest {
     @Test
     public void familyBAfterTwelve(){
         Family family = new Family(7);
-        family.getId("B");
+        family.setId("B");
 
         assertEquals(16,family.getRate(24));
     }
@@ -69,7 +69,7 @@ public class FamilyTest {
     @Test
     public void familyCAfterNine(){
         Family family = new Family(7);
-        family.getId("C");
+        family.setId("C");
 
         assertEquals(15,family.getRate(21) );
     }

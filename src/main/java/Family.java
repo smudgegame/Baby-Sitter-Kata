@@ -7,11 +7,16 @@ public class Family {
     }
 
     public int getRate(int hour) {
+        /* This can be done better,
+        the BabySitter loop compares all
+        these family IDs profiles for each
+        hour :S... not good. I'd like it
+        to only look at the proper family ID*/
         if(this.id == null)
             return rate;
         if(this.id.equals("A")) {
             rate=15;
-            if(hour>=23) rate = 20;
+            if(hour >= 23) rate = 20;
         }
         if(this.id.equals("B"))  {
             rate=12;
@@ -25,8 +30,7 @@ public class Family {
             return rate;
     }
 
-    public String getId(String id) {
+    public void setId(String id) {
         this.id = id;
-        return id;
     }
 }
