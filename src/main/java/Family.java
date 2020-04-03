@@ -7,7 +7,7 @@ public class Family {
         this.id = id;
     }
 
-    public  Family(int rate){
+    public Family(int rate) {
         this.rate = rate;
     }
 
