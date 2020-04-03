@@ -37,8 +37,7 @@ public class BabySitterTest {
 
     @Test
     public void oneHourForFamilyA() {
-        Family family = new Family(7);
-        family.setId("A");
+        Family family = new Family(7,"A");
         BabySitter babySitter = new BabySitter(family);
 
         int pay = babySitter.calculatePay("5:00pm", "6:00pm");
@@ -47,8 +46,7 @@ public class BabySitterTest {
 
     @Test
     public void oneFullNightFamilyA() {
-        Family family =new Family(7);
-        family.setId("A");
+        Family family =new Family(7,"A");
         BabySitter babySitter = new BabySitter(family);
 
         int pay = babySitter.calculatePay("5:00pm", "4:00am");
@@ -57,8 +55,7 @@ public class BabySitterTest {
 
     @Test
     public void oneFullNightFamilyB(){
-        Family family =new Family(7);
-        family.setId("B");
+        Family family =new Family(7,"B");
         BabySitter babySitter = new BabySitter(family);
 
         int pay = babySitter.calculatePay("5:00pm", "4:00am");
@@ -67,8 +64,7 @@ public class BabySitterTest {
 
     @Test
     public void oneFullNightFamilyC(){
-        Family family =new Family(7);
-        family.setId("C");
+        Family family =new Family(7,"C");
         BabySitter babySitter = new BabySitter(family);
 
         int pay = babySitter.calculatePay("5:00pm", "4:00am");

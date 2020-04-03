@@ -20,58 +20,51 @@ public class FamilyTest {
 
     @Test
     public void baseRateBasedOnFamilyId() {
-        Family family = new Family(7);
-        family.setId("A");
+        Family family = new Family(7, "A");
 
-        assertEquals(15,family.getRate(17) );
+        assertEquals(15, family.getRate(17));
     }
 
     @Test
-    public void familyBBaseRate(){
-        Family family = new Family(7);
-        family.setId("B");
+    public void familyBBaseRate() {
+        Family family = new Family(7, "B");
 
-        assertEquals(12,family.getRate(17) );
+        assertEquals(12, family.getRate(17));
     }
 
     @Test
-    public void familyCBaseRate(){
-        Family family = new Family(7);
-        family.setId("C");
+    public void familyCBaseRate() {
+        Family family = new Family(7, "C");
 
-        assertEquals(21,family.getRate(17) );
+        assertEquals(21, family.getRate(17));
     }
 
     @Test
-    public void familyARateBasedOnHour(){
-        Family family = new Family(7);
-        family.setId("A");
+    public void familyARateBasedOnHour() {
+        Family family = new Family(7, "A");
 
-        assertEquals(20,family.getRate(23));
+        assertEquals(20, family.getRate(23));
     }
 
     @Test
-    public void familyBTenToTwelve(){
-        Family family = new Family(7);
-        family.setId("B");
+    public void familyBTenToTwelve() {
+        Family family = new Family(7, "B");
 
-        assertEquals(8,family.getRate(22));
+        assertEquals(8, family.getRate(22));
     }
 
     @Test
-    public void familyBAfterTwelve(){
-        Family family = new Family(7);
-        family.setId("B");
+    public void familyBAfterTwelve() {
+        Family family = new Family(7, "B");
 
-        assertEquals(16,family.getRate(24));
+        assertEquals(16, family.getRate(24));
     }
 
     @Test
-    public void familyCAfterNine(){
-        Family family = new Family(7);
-        family.setId("C");
+    public void familyCAfterNine() {
+        Family family = new Family(7, "C");
 
-        assertEquals(15,family.getRate(21) );
+        assertEquals(15, family.getRate(21));
     }
 
 }
