@@ -1,10 +1,13 @@
+import java.util.Map;
+
 public class Family {
     private int rate;
     private String id;
-
-    public Family(int rate, String id) {
+    private Map<Integer,Integer> hourlyRate;
+    public Family(int rate, String id, Map<Integer,Integer> hourlyRate) {
         this.rate = rate;
         this.id = id;
+        this.hourlyRate = hourlyRate;
     }
 
     public Family(int rate) {
@@ -12,11 +15,6 @@ public class Family {
     }
 
     public int getRate(int hour) {
-        /* This can be done better,
-        the BabySitter loop compares all
-        these family IDs profiles for each
-        hour :S... not good. I'd like it
-        to only look at the proper family ID*/
         if (this.id == null)
             return rate;
         if (this.id.equals("A")) {

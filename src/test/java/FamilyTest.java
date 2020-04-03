@@ -1,5 +1,8 @@
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.Assert.assertEquals;
 
 public class FamilyTest {
@@ -20,49 +23,63 @@ public class FamilyTest {
 
     @Test
     public void baseRateBasedOnFamilyId() {
-        Family family = new Family(7, "A");
+        Map<Integer, Integer> hourlyRate = new HashMap<>();
+        hourlyRate.put(17, 15);
+        Family family = new Family(7, "A", hourlyRate);
 
         assertEquals(15, family.getRate(17));
     }
 
     @Test
     public void familyBBaseRate() {
-        Family family = new Family(7, "B");
+        Map<Integer, Integer> hourlyRate = new HashMap<>();
+        hourlyRate.put(17, 12);
+        Family family = new Family(7, "B", hourlyRate);
 
         assertEquals(12, family.getRate(17));
     }
 
     @Test
     public void familyCBaseRate() {
-        Family family = new Family(7, "C");
+        Map<Integer, Integer> hourlyRate = new HashMap<>();
+        hourlyRate.put(17, 21);
+        Family family = new Family(7, "C", hourlyRate);
 
         assertEquals(21, family.getRate(17));
     }
 
     @Test
     public void familyARateBasedOnHour() {
-        Family family = new Family(7, "A");
+        Map<Integer, Integer> hourlyRate = new HashMap<>();
+        hourlyRate.put(23, 20);
+        Family family = new Family(7, "A", hourlyRate);
 
         assertEquals(20, family.getRate(23));
     }
 
     @Test
     public void familyBTenToTwelve() {
-        Family family = new Family(7, "B");
+        Map<Integer, Integer> hourlyRate = new HashMap<>();
+        hourlyRate.put(22, 8);
+        Family family = new Family(7, "B", hourlyRate);
 
         assertEquals(8, family.getRate(22));
     }
 
     @Test
     public void familyBAfterTwelve() {
-        Family family = new Family(7, "B");
+        Map<Integer, Integer> hourlyRate = new HashMap<>();
+        hourlyRate.put(24, 16);
+        Family family = new Family(7, "B", hourlyRate);
 
         assertEquals(16, family.getRate(24));
     }
 
     @Test
     public void familyCAfterNine() {
-        Family family = new Family(7, "C");
+        Map<Integer, Integer> hourlyRate = new HashMap<>();
+        hourlyRate.put(21, 15);
+        Family family = new Family(7, "C", hourlyRate);
 
         assertEquals(15, family.getRate(21));
     }
