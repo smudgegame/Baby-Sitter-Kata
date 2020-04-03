@@ -1,27 +1,29 @@
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class BabySitterTest {
+    private static BabySitter babySitter;
+
+    @BeforeClass
+    public static void setUp(){
+        Family family = new Family(7);
+        babySitter = new BabySitter(family);
+    }
 
     @Test(expected = IllegalArgumentException.class)
     public void startTimeCannotBeAfterEndTime() {
-        Family family = new Family(7);
-        BabySitter babySitter = new BabySitter(family);
         babySitter.calculatePay("6:00pm", "5:00pm");
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void timeBeforeAllowableHours(){
-        Family family = new Family(7);
-        BabySitter babySitter = new BabySitter(family);
         babySitter.calculatePay("4:00pm","6:00pm");
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void timeAfterAllowableHours(){
-        Family family = new Family(7);
-        BabySitter babySitter = new BabySitter(family);
         babySitter.calculatePay("5:00pm","6:00am");
     }
 
