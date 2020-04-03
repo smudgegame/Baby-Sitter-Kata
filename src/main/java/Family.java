@@ -4,7 +4,7 @@ public class Family {
 
     public Family(int rate) {
         this.rate = rate;
-    }
+}
 
     public int getRate(int hour) {
         /* This can be done better,
