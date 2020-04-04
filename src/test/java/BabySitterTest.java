@@ -87,4 +87,17 @@ public class BabySitterTest {
         assertEquals(189, pay);
     }
 
+    @Test
+    public void partialNight() {
+        Map<Integer, Integer> hourlyRate = new HashMap<>();
+        hourlyRate.put(23, 20);
+
+        Family family = new Family(15, hourlyRate);
+        BabySitter babySitter = new BabySitter(family);
+
+        int pay = babySitter.calculatePay("1:00am", "4:00am");
+        assertEquals(60, pay);
+    }
+
+
 }
