@@ -97,7 +97,13 @@ public class BabySitterTest {
 
         int pay = babySitter.calculatePay("1:00am", "4:00am");
         assertEquals(60, pay);
+
     }
 
+    @Test
+    public void startsAtMidnight() {
+        int pay = babySitter.calculatePay("12:00am", "1:00am");
+        assertEquals(7, pay);
+    }
 
 }

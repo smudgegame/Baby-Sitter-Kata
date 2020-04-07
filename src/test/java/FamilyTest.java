@@ -16,7 +16,7 @@ public class FamilyTest {
 
     @Test
     public void basicFamilyWithADifferentRate() {
-        Family family = new Family(7,new HashMap<>());
+        Family family = new Family(7, new HashMap<>());
 
         assertEquals(7, family.getRate(17));
     }
@@ -34,7 +34,7 @@ public class FamilyTest {
     public void familyBBaseRate() {
         Map<Integer, Integer> hourlyRate = new HashMap<>();
         hourlyRate.put(17, 12);
-        Family family = new Family(7,  hourlyRate);
+        Family family = new Family(7, hourlyRate);
 
         assertEquals(12, family.getRate(17));
     }
@@ -43,7 +43,7 @@ public class FamilyTest {
     public void familyCBaseRate() {
         Map<Integer, Integer> hourlyRate = new HashMap<>();
         hourlyRate.put(17, 21);
-        Family family = new Family(7,hourlyRate);
+        Family family = new Family(7, hourlyRate);
 
         assertEquals(21, family.getRate(17));
     }
@@ -52,7 +52,7 @@ public class FamilyTest {
     public void familyARateBasedOnHour() {
         Map<Integer, Integer> hourlyRate = new HashMap<>();
         hourlyRate.put(23, 20);
-        Family family = new Family(7,  hourlyRate);
+        Family family = new Family(7, hourlyRate);
 
         assertEquals(20, family.getRate(23));
     }
